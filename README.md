@@ -1,7 +1,7 @@
 # Inventory-Management-System-With-SAPUI5
 * This is a simple inventory management system supported by Image Classification API of SAP Leonardo Machine learning.
 * I have deploy the application to sap cloud platform due to some reason.
-* You can currently use this app throught this link:
+* You can currently use this app through this link:
 [ACCESS TO APPLICATION](https://webidetesting9316031-p2001966809trial.dispatcher.hanatrial.ondemand.com/WebContent/index.html?hc_orionpath=%2FDI_webide_di_workspaceem95am1xc9wstjsa%2FInventory-Management-System-With-SAPUI5&neo-di-affinity=BIGipServer~jpaas_folder~disapwebide.hanatrial.ondemand.com+%21gRTobm0PLHTxFzDSdzDcXJk7F8ESPFk06LHHHKw0cnk4N6xdi%2FOPwiZf9drttWN59bOUrG%2BkQy4BHw%3D%3D&origional-url=index.html&sap-ui-appCacheBuster=..%2F&sap-ui-xx-componentPreload=off)
 * Please contact me to get the account and password.
 ## Backend service
