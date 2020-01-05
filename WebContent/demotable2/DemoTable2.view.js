@@ -14,23 +14,23 @@ sap.ui.jsview("demotable2.DemoTable2", {
 	*/ 
 	createContent : function(oController) {
 			var oTable = new sap.ui.table.Table("tableId",{
-			title: "Product Details",
+			title: "Product Details （产品详情）",
 			visibleRowCount:10,
 			editable:false
 		});
 		oTable.addColumn(new sap.ui.table.Column({
-			label: new sap.ui.commons.Label({text:"Product ID"}),
+			label: new sap.ui.commons.Label({text:"Product ID (产品ID)"}),
 			visible: true,
 			template: new sap.ui.commons.TextView({text:"{products>ProductID}"})
 		}) );
 		oTable.addColumn(new sap.ui.table.Column({
-			label: new sap.ui.commons.Label({text:"Product Name"}),
+			label: new sap.ui.commons.Label({text:"Product Name (产品名称）"}),
 			visible: true,
 			template: new sap.ui.commons.TextView({text:"{products>ProductName}"})
 		}) );
 		
 		oTable.addColumn(new sap.ui.table.Column({
-			label: new sap.ui.commons.Label({text:"Product Count"}),
+			label: new sap.ui.commons.Label({text:"Units In Stock （库存）"}),
 			visible: true,
 			template: new sap.ui.commons.TextView({text:"{products>UnitsInStock}"})
 		}) );
@@ -40,14 +40,14 @@ sap.ui.jsview("demotable2.DemoTable2", {
 		var oLayout = new sap.ui.layout.form.SimpleForm("formId",{
 			title: "Product Maintainance",
 			content: [
-		      new sap.ui.commons.Label({text: "Product ID"}),
+		      new sap.ui.commons.Label({text: "Product ID (产品ID)"}),
 		          		          new sap.ui.commons.TextField({
 		        	  id: 'ProductId',
 		        	  width: '200px',
 		        	  value:'{singleproduct>/d/ProductID}',
 		        	  editable: false
 		        	  }),    
-		          new sap.ui.commons.Label({text: "Product Name"}),
+		          new sap.ui.commons.Label({text: "Product Name (产品名称）"}),
 		          		          new sap.ui.commons.TextField({
 		        	  id: 'ProductName',
 		        	  width: '200px',
@@ -55,7 +55,7 @@ sap.ui.jsview("demotable2.DemoTable2", {
 		        	  editable: false
 		        	  }), 
                   
-		          new sap.ui.commons.Label({text: "Product Count"}),
+		          new sap.ui.commons.Label({text: "Units In Stock （库存）"}),
 		         		          new sap.ui.commons.TextField({
 		        	  id: 'ProductCount',
 		        	  width: '200px',
@@ -87,12 +87,12 @@ var oUploadLayout = new sap.ui.layout.form.SimpleForm("uploadformId",{
     				maximumFileSize: 2,
     				uploadOnChange: false,
     				multiple: true,
-    				buttonText: "Browse",
+    				buttonText: "Browse（浏览）",
     				additionalData: "abc=123&test=456",
                   }),
 		          new sap.ui.commons.Label({text: ""}),
 		          new sap.ui.commons.Button({
-		        	  text: "Search",
+		        	  text: "Search（搜索）",
 		        	  width: '150px',
 		        	  height: '50px',
 		        	  press: function() {

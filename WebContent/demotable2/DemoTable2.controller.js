@@ -9,7 +9,7 @@ sap.ui.controller("demotable2.DemoTable2", {
 
 
 		//use your ODATA URL of the app here
-		var sUrl = "https://cors-anywhere.herokuapp.com/https://cn5qsz3owbax0wzk-products-srv.cfapps.eu10.hana.ondemand.com:443/odata/v2/CatalogService/Products";
+		var sUrl = "https://cors-anywhere.herokuapp.com/https://bjxp7y1qfmxa1hwl-productsdata-srv.cfapps.eu10.hana.ondemand.com/odata/v2/CatalogService/Products";
 		var oModel = sap.ui.model.json.JSONModel(sUrl);
 		console.log(oModel);
 		sap.ui.getCore().setModel(oModel, 'products');
@@ -60,15 +60,24 @@ sap.ui.controller("demotable2.DemoTable2", {
 					SingleID = 0;
 					if (ProductImage == 'printer') {
 						SingleID = 2;
-
 					} else if (ProductImage == 'notebook') {
 						SingleID = 1;
 					} else if (ProductImage == 'hard disc') {
-						SingleID = 99;
+						SingleID = 5;
 					} else if (ProductImage == 'reflex camera') {
-						SingleID = 98;
+						SingleID = 4;
 					} else if (ProductImage == 'mouse') {
 						SingleID = 3;
+					} else if (ProductImage == 'computer keyboard') {
+						SingleID = 6;
+					} else if (ProductImage == 'microphone') {
+						SingleID = 7;
+					} else if (ProductImage == 'backpack') {
+						SingleID = 8;
+					} else if (ProductImage == 'mobile phone') {
+						SingleID = 9;
+					} else if (ProductImage == 'watch') {
+						SingleID = 10;
 					} else {
 						SingleID = 0;
 						alert("Product " + ProductImage + " not found in the SAP");
@@ -76,7 +85,7 @@ sap.ui.controller("demotable2.DemoTable2", {
 
 					//Get the single product details , use the ODATA URL
 
-					var sUrl2 = "https://cors-anywhere.herokuapp.com/https://cn5qsz3owbax0wzk-products-srv.cfapps.eu10.hana.ondemand.com:443/odata/v2/CatalogService/Products(" + SingleID + ")";
+					var sUrl2 = "https://cors-anywhere.herokuapp.com/https://bjxp7y1qfmxa1hwl-productsdata-srv.cfapps.eu10.hana.ondemand.com/odata/v2/CatalogService/Products(" + SingleID + ")";
 					var oModel2 = new sap.ui.model.json.JSONModel(sUrl2);
 					console.log(oModel2);
 					sap.ui.getCore().setModel(oModel2, 'singleproduct');
@@ -103,7 +112,7 @@ sap.ui.controller("demotable2.DemoTable2", {
 		var productid = sap.ui.getCore().byId("ProductID").getValue();
 		var productname = sap.ui.getCore().byId("ProductName").getValue();
 		var productcount = sap.ui.getCore().byId("UnitsInStock").getValue();
-		var sUrl = "https://cn5qsz3owbax0wzk-products-srv.cfapps.eu10.hana.ondemand.com:443/odata/v2/CatalogService/Products";
+		var sUrl = "https://bjxp7y1qfmxa1hwl-productsdata-srv.cfapps.eu10.hana.ondemand.com/odata/v2/CatalogService/Products";
 		var oModels = new sap.ui.model.odata.v2.ODataModel(sUrl,true);
 		var newData = {
 
@@ -113,7 +122,7 @@ sap.ui.controller("demotable2.DemoTable2", {
 		}
 
 		OData.request({
-			requestUri: "https://cors-anywhere.herokuapp.com/https://cn5qsz3owbax0wzk-products-srv.cfapps.eu10.hana.ondemand.com:443/odata/v2/CatalogService/Products",
+			requestUri: "https://cors-anywhere.herokuapp.com/https://bjxp7y1qfmxa1hwl-productsdata-srv.cfapps.eu10.hana.ondemand.com/odata/v2/CatalogService/Products",
 			method: "GET",
 			headers: {
 				
@@ -129,7 +138,7 @@ sap.ui.controller("demotable2.DemoTable2", {
 		}, function (data, request) {
 			var id = $("#id").val();
 			OData.request({
-				requestUri: "https://cors-anywhere.herokuapp.com/https://cn5qsz3owbax0wzk-products-srv.cfapps.eu10.hana.ondemand.com:443/odata/v2/CatalogService/Products(" + productid + ")",
+				requestUri: "https://cors-anywhere.herokuapp.com/https://bjxp7y1qfmxa1hwl-productsdata-srv.cfapps.eu10.hana.ondemand.com/odata/v2/CatalogService/Products(" + productid + ")",
 				method: "PUT",
 				headers: {
 					"Allow-Control-Allow-Origin" : "*",
