@@ -6,9 +6,6 @@ sap.ui.controller("demotable2.DemoTable2", {
 	 * @memberOf demotable2.DemoTable2
 	 */
 	onInit: function () {
-
-
-		//use your ODATA URL of the app here
 		var sUrl = "https://cors-anywhere.herokuapp.com/https://bjxp7y1qfmxa1hwl-productsdata-srv.cfapps.eu10.hana.ondemand.com/odata/v2/CatalogService/Products";
 		var oModel = sap.ui.model.json.JSONModel(sUrl);
 		console.log(oModel);
@@ -82,8 +79,6 @@ sap.ui.controller("demotable2.DemoTable2", {
 						SingleID = 0;
 						alert("Product " + ProductImage + " not found in the SAP");
 					}
-
-					//Get the single product details , use the ODATA URL
 
 					var sUrl2 = "https://cors-anywhere.herokuapp.com/https://bjxp7y1qfmxa1hwl-productsdata-srv.cfapps.eu10.hana.ondemand.com/odata/v2/CatalogService/Products(" + SingleID + ")";
 					var oModel2 = new sap.ui.model.json.JSONModel(sUrl2);
